@@ -2,13 +2,16 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState, useEffect } from 'react';
+import { Alert } from '@mui/material';
+import credentialsSuperAdmin from '../../utils/validators/credentials.json'
+
 
 function Copyright(props: any) {
   return (
@@ -25,15 +28,26 @@ function Copyright(props: any) {
 
 const theme = createTheme();
 
-export default function SignInSide() {
+export default function Login() {
+  const [credentials, setCredentials] = useState({email:"", password:""})
+  const [isLogin, setIsLogin] = useState<number | null>(null)
+  const navigate = useNavigate();
+  
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    if(credentials.email===credentialsSuperAdmin.email && credentials.password===credentialsSuperAdmin.password){
+      setIsLogin(1) 
+    }
+    else{
+      setIsLogin(0)
+    }
   };
+
+  useEffect(()=>{
+    if(isLogin){
+      navigate("/dashboard")
+    }
+  },[isLogin,navigate])
 
   return (
     <ThemeProvider theme={theme}>
@@ -53,6 +67,7 @@ export default function SignInSide() {
             backgroundPosition: 'center',
           }}
         />
+        
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -67,9 +82,12 @@ export default function SignInSide() {
             <img 
             src='https://g05991.p3cdn1.secureserver.net/wp-content/uploads/2021/10/CBT_Updated_Logo-168x55.png' alt="logo" />
           </Box>
+          
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
+            {isLogin===null ? "" : <Alert severity="error">Please enter valid credentials!</Alert>}
+            
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
@@ -80,6 +98,8 @@ export default function SignInSide() {
                 name="email"
                 autoComplete="email"
                 autoFocus
+                value={credentials.email}
+                onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
               />
               <TextField
                 margin="normal"
@@ -90,6 +110,8 @@ export default function SignInSide() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                value={credentials.password}
+                onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
               />
               <Button
                 type="submit"
