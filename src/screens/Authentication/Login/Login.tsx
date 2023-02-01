@@ -11,6 +11,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
 import { Alert } from '@mui/material';
 import credentialsSuperAdmin from '../../../utils/validators/credentials.json'
+import PrimaryButton from '../../../components/Button/PrimaryButton';
 
 
 function Copyright(props: any) {
@@ -18,7 +19,7 @@ function Copyright(props: any) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       
-        Clover Bay Techonlogies
+        Clover Bay Technologies
       {' '}
       {new Date().getFullYear()}
       {'.'}
@@ -84,7 +85,7 @@ export default function Login() {
           </Box>
           
             <Typography component="h1" variant="h5">
-              Sign in
+              Log in
             </Typography>
             {isLogin===null ? "" : <Alert severity="error">Please enter valid credentials!</Alert>}
             
@@ -113,14 +114,23 @@ export default function Login() {
                 value={credentials.password}
                 onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
               />
-              <Button
+              {/* <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
-              </Button>
+                Log In
+              </Button> */}
+              <PrimaryButton
+              type="submit"
+              fullWidth
+              variant="contained"
+              sx={{ mt: 3, mb: 2 }}
+              onClick = {handleSubmit}
+              >
+              log in 
+              </PrimaryButton>
               <Grid container>
                 <Grid item xs>
                   <Typography  variant="body2">

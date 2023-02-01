@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
+// import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import {Link} from 'react-router-dom'
@@ -9,13 +9,14 @@ import Grid from '@mui/material/Grid';
 
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import PrimaryButton from '../../../components/Button/PrimaryButton';
 
 function Copyright(props: any) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       
-        Clover Bay Techonlogies
+        Clover Bay Technologies
       {' '}
       {new Date().getFullYear()}
       {'.'}
@@ -81,19 +82,28 @@ export default function SignInSide() {
                 autoComplete="email"
                 autoFocus
               />
-              <Button
+              {/* <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign In
-              </Button>
+                Login In
+              </Button> */}
+              <PrimaryButton
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+                onClick = {handleSubmit}
+              >
+                Log in
+              </PrimaryButton>
               <Grid container>
                 <Grid item xs>
                   <Typography  variant="body2">
                     <Link to="/login">
-                      Back to Login
+                      Back to Login Page
                     </Link>
                   </Typography>
                 </Grid>
