@@ -45,7 +45,7 @@ export default function Login() {
 
   useEffect(()=>{
     if(isLogin){
-      navigate("/dashboard")
+      navigate("/")
     }
   },[isLogin,navigate])
 
