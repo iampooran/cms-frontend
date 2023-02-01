@@ -4,7 +4,7 @@ const Dashboard = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <PageLoader/>
+      {/* <PageLoader/> */}
       <Container maxWidth={false}>
         <Grid container spacing={1}>
           <Grid item xs={10} mb={2}>

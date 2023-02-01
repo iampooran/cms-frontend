@@ -1,20 +1,17 @@
-import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-// import MenuIcon from "@material-ui/icons/Menu";
-//import MenuIcon from "@mui/material/MenuItem";
 import ToggleButton from '@mui/material/ToggleButton';
 import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify';
 import Avatar from '@mui/material/Avatar';
 import "./Navbar.scss"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { Link } from 'react-router-dom';
 
 
-export default function ButtonAppBar() {
+export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -45,9 +42,9 @@ export default function ButtonAppBar() {
             
           </Avatar>
           <div className="dropdown-content">
-                <a href="#">Profile</a>
-                <a href="#">Change Password</a>
-                <a href="#">Log Out</a>
+                <Link to="/profile">Profile</Link>
+                <Link to="/changepassword">Change Password</Link>
+                <Link to="/Logout">Log Out</Link>
             </div>
           </div>
         </Toolbar>
