@@ -1,9 +1,10 @@
 import { Container, Grid, Typography, Box } from "@mui/material";
-import PageLoader from "../../../components/PageLoader";
+import Navbar from "../../../components/Navbar/Navbar";
+// import PageLoader from "../../../components/PageLoader";
 const Dashboard = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <PageLoader/> */}
       <Container maxWidth={false}>
         <Grid container spacing={1}>

@@ -9,9 +9,17 @@ import Avatar from '@mui/material/Avatar';
 import "./Navbar.scss"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../utils/redux/reducer/authentication-slice';
 
 
 export default function Navbar() {
+  const dispatch = useDispatch()
+
+  const handleLogOut = () =>{
+    dispatch(logout())
+  }
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -44,7 +52,7 @@ export default function Navbar() {
           <div className="dropdown-content">
                 <Link to="/profile">Profile</Link>
                 <Link to="/changepassword">Change Password</Link>
-                <Link to="/Logout">Log Out</Link>
+                <Link to="/login" onClick={handleLogOut}>Log Out</Link>
             </div>
           </div>
         </Toolbar>
