@@ -1,9 +1,9 @@
 import { FC } from "react";
-import ForgotPassword from "../screens/ForgotPassword";
+import ForgotPassword from "../screens/Authentication/ForgotPassword";
 import { Route, Routes as Switch } from "react-router-dom";
 import { routes } from "../utils/constants/routes";
-import Login from "../screens/Login";
-import Dashboard from "../screens/Dashboard/Dashboard";
+import Login from "../screens/Authentication/Login";
+import Dashboard from "../screens/Authenticated/Dashboard/Dashboard";
 
 
 
