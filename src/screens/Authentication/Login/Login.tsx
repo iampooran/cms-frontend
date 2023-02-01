@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
 import { Alert } from '@mui/material';
-import credentialsSuperAdmin from '../../utils/validators/credentials.json'
+import credentialsSuperAdmin from '../../../utils/validators/credentials.json'
 
 
 function Copyright(props: any) {
