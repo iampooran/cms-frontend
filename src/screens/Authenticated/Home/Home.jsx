@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import Navbar from '../../../components/Navbar/Navbar'
 import { routes } from '../../../utils/constants/routes';
 import { selectUser } from '../../../utils/redux/reducer/authentication-slice';
 

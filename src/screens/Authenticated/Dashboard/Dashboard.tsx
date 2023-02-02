@@ -1,23 +1,9 @@
-import { Container, Grid, Typography, Box } from "@mui/material";
-import Navbar from "../../../components/Navbar/Navbar";
-// import PageLoader from "../../../components/PageLoader";
+import React from 'react'
+
 const Dashboard = () => {
   return (
-    <>
-      <Navbar />
-      {/* <PageLoader/> */}
-      <Container maxWidth={false}>
-        <Grid container spacing={1}>
-          <Grid item xs={10} mb={2}>
-            <Typography>
-              {/* dashboard title */}
-              DASHBOARD 
-            </Typography>
-          </Grid>
-        </Grid>
-      </Container>
-    </>
+    <div>Dashboard</div>
   )
 }
 
-export default Dashboard;
+export default Dashboard
