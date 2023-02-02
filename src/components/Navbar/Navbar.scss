@@ -1,17 +1,11 @@
-.profileIcon{
-    transition: 0.3s;
-}
 
-.profileIcon2{
-    transition: 0.3s;
-}
-.profileIcon:hover{
-    background-color:#1976D2;
-}
+// .profileIcon:hover{
+//     background-color:#EAE1C3;
+// }
 
-.profileIcon2:hover{
-    color:white;
-}
+// .profileIcon2:hover{
+//     color:#BA9B37;
+// }
 
 .dropbtn {
     background-color: #04AA6D;
@@ -51,3 +45,6 @@
   .dropdown-content a:hover {background-color: white;}
   .dropdown:hover .dropdown-content {display: block;}
 
+.drawer{
+  color:#04AA6D
+}

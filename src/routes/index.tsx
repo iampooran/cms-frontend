@@ -8,6 +8,8 @@ import Home from "../screens/Authenticated/Home/Home";
 import Profile from "../screens/Authenticated/Profile/Profile";
 import ChangePassword from "../screens/Authenticated/ChangePassword/ChangePassword";
 import HomeScreen from "../screens/Authenticated/Home/HomeScreen";
+import AddUser from "../screens/Authenticated/AddUser/AddUser";
+import UserList from "../screens/Authenticated/UserList/UserList";
 
 const Routes: FC = () => {
 
@@ -20,6 +22,8 @@ const Routes: FC = () => {
         <Route path={routes.dashboard} element={<HomeScreen Component={Dashboard}/>} />
         <Route path={routes.changepassword} element={<HomeScreen Component={ChangePassword}/>} />
         <Route path={routes.profile} element={<HomeScreen Component={Profile}/>} />
+        <Route path={routes.adduser} element={<HomeScreen Component={AddUser}/>} />
+        <Route path={routes.userlist} element={<HomeScreen Component={UserList}/>} />
   </Switch>
     </>
   );

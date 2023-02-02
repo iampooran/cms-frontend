@@ -11,7 +11,7 @@ import { useState, useEffect } from 'react';
 import { Alert } from '@mui/material';
 import credentialsSuperAdmin from '../../../utils/validators/credentials.json'
 import PrimaryButton from '../../../components/Button/PrimaryButton';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { login } from '../../../utils/redux/reducer/authentication-slice';
 
 
@@ -59,7 +59,7 @@ useEffect(()=>{
       dispatch(login(isLogin))
       navigate("/")
     }
-  },[isLogin,navigate])
+  },[isLogin,navigate,dispatch])
 
   return (
     <ThemeProvider theme={theme}>

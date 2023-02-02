@@ -19,11 +19,17 @@ import { Avatar } from '@mui/material';
 import "./Navbar.scss"
 import { mdTheme, AppBar, Drawer } from '.';
 
+const listStyle1 = {
+  backgroundColor: '#F8F5EB'
+}
+
 
 
 
 const Navbar: FC<{ Component: FC }> = ({ Component }) => {
   const dispatch = useDispatch()
+
+  
 
   const handleLogOut = () =>{
     dispatch(logout())
@@ -34,16 +40,17 @@ const Navbar: FC<{ Component: FC }> = ({ Component }) => {
   };
   return (
   <>
-  <ThemeProvider theme={mdTheme}>
-      <Box sx={{ display: 'flex' }}>
+  <ThemeProvider theme={mdTheme} >
+      <Box sx={{ display: 'flex' }} >
         <CssBaseline />
-        <AppBar position="absolute" open={open}>
-          <Toolbar
+        <AppBar position="absolute" open={open} style={{ background: '#F8F5EB' }} >
+          <Toolbar 
             sx={{
               pr: '24px',
             }}
           >
             <IconButton
+            
               edge="start"
               color="inherit"
               aria-label="open drawer"
@@ -53,18 +60,18 @@ const Navbar: FC<{ Component: FC }> = ({ Component }) => {
                 ...(open && { display: 'none' }),
               }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{color:"#BA9B37"}}/>
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#BA9B37", fontWeight:"bold"}}>
             SuperAdmin Name
           </Typography>
-          <Typography variant="body1" component="div" sx={{ flexGrow: 3 }}>
+          <Typography variant="body1" component="div" sx={{ flexGrow: 3, color:"#BA9B37", fontWeight:"bold" }} >
             Super Admin Information
           </Typography>
           <div className="dropdown">
-          <Avatar sx={{ mr: 2, bgcolor: 'white'}} className="profileIcon" >
+          <Avatar sx={{ mr: 2, bgcolor: '#BA9B37'}} className="profileIcon" >
             
-            <AccountCircleIcon sx={{ color: '#1976D2' }} className="profileIcon2" fontSize="large"/>
+            <AccountCircleIcon sx={{ color: '#F8F5EB' }} className="profileIcon2" fontSize="large"/>
             
           </Avatar>
           <div className="dropdown-content">
@@ -75,8 +82,8 @@ const Navbar: FC<{ Component: FC }> = ({ Component }) => {
           </div>
           </Toolbar>
         </AppBar>
-        <Drawer variant="permanent" open={open}>
-          <Toolbar
+        <Drawer  variant="permanent" open={open} >
+          <Toolbar style={listStyle1}
             sx={{
               display: 'flex',
               alignItems: 'center',
@@ -88,25 +95,23 @@ const Navbar: FC<{ Component: FC }> = ({ Component }) => {
               <ChevronLeftIcon />
             </IconButton>
           </Toolbar>
-          <Divider />
-          <List component="nav">
+          <Divider/>
+          <List component="nav" >
             {ListItems}
           </List>
         </Drawer>
-        <Box
+        <Box 
+        
           component="main"
           sx={{
-            backgroundColor: (theme) =>
-              theme.palette.mode === 'light'
-                ? theme.palette.grey[100]
-                : theme.palette.grey[900],
+            backgroundColor: "#F8F5EB",
             flexGrow: 1,
             height: '100vh',
             overflow: 'auto',
           }}
         >
           <Toolbar />
-          <Component/>
+          <Component />
         </Box>
       </Box>
     </ThemeProvider>
