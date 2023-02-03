@@ -1,0 +1,33 @@
+
+.userList{
+    display: flex;
+    width: 1200px;
+    border-radius: 10px;
+    background-color: #BA9B37;
+    margin-top: 25px;
+}
+
+
+.userList2{
+    display: flex;
+    width: 1200px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.left{
+    flex: 1;
+    // background-color: yellow;
+    text-align: left;
+    margin-left: 50px;
+    color:white
+}
+
+.right{
+    flex:1;
+    // background-color: red;
+    text-align: right;
+    margin-right: 50px;
+    
+
+}
