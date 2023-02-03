@@ -5,6 +5,7 @@ import { routes } from "../utils/constants/routes";
 import Login from "../screens/Authentication/Login";
 import Dashboard from "../screens/Authenticated/Dashboard/Dashboard";
 import Home from "../screens/Authenticated/Home/Home";
+import AddUser from "../screens/Authenticated/AddUser/AddUser"
 
 
 
@@ -20,6 +21,9 @@ const Routes: FC = () => {
         <Route path={routes.forgotPassword} element={<ForgotPassword />} />
         <Route path={routes.login} element={<Login />} />
         <Route path={routes.dashboard} element={<Dashboard />} />
+        <Route path={routes.adduser} element={<AddUser/>}/>
+        
+        
         
     </Switch>
     </>
