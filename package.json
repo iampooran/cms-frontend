@@ -6,7 +6,12 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
+<<<<<<< HEAD
     "@mui/material": "^5.11.7",
+=======
+    "@mui/material": "^5.11.6",
+    "@reduxjs/toolkit": "^1.9.2",
+>>>>>>> a260f26491086b9b6b14be1b4fe1a73dc994de4c
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,9 +21,15 @@
     "@types/react-dom": "^18.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-recaptcha": "^2.3.10",
+=======
+    "react-redux": "^8.0.5",
+>>>>>>> a260f26491086b9b6b14be1b4fe1a73dc994de4c
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
+    "styled-components": "^5.3.6",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -47,6 +58,10 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@types/react-recaptcha": "^2.3.4"
+=======
+    "@types/styled-components": "^5.1.26"
+>>>>>>> a260f26491086b9b6b14be1b4fe1a73dc994de4c
   }
 }
