@@ -1,4 +1,4 @@
-.loginPage{
+.login-page{
     box-sizing: border-box;
 
 position: absolute;
@@ -10,4 +10,8 @@ top: 94px;
 background: rgba(186, 155, 55, 0.05);
 border: 1px solid #BA9B37;
 border-radius: 40px;
+}
+
+.btn{
+    color: blue;
 }

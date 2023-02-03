@@ -13,6 +13,34 @@ import credentialsSuperAdmin from '../../../utils/validators/credentials.json'
 import PrimaryButton from '../../../components/Button/PrimaryButton';
 import { useDispatch } from 'react-redux';
 import { login } from '../../../utils/redux/reducer/authentication-slice';
+import styledComponent from "styled-components";
+import { styled } from "@mui/material/styles";
+import Button from '@mui/material/Button';
+import { ButtonProps } from "@mui/material/Button";
+import '../Login/login.css'
+import { blue } from '@mui/material/colors';
+//import imagelogin from '../../../assets/images/imagelogin.png'
+
+const SignInButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  color: "white",
+  backgroundColor: "#BA9B37",
+  "&:hover": {
+    backgroundColor: "#EAE1C3",
+    color: "#BA9B37",
+  },
+}));
+
+
+const CustomTextField = styledComponent(TextField)`
+  & label.Mui-focused {
+    color: #BA9B37;
+  }
+  & .MuiOutlinedInput-root {
+    &.Mui-focused fieldset {
+      border-color: #BA9B37;
+    }
+  }
+`;
 
 
 function Copyright(props: any) {
@@ -63,24 +91,30 @@ useEffect(()=>{
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '100vh' }} className= "login.css">
+      <Grid container component="main" sx={{ height: '100vh' }} className= "login-page.css">
         <CssBaseline />
+        
         <Grid
           item
           xs={false}
-          sm={4}
-          md={7}
+          sm={6}
+         // md={7}
+          
           sx={{
-            backgroundImage: 'url(https://img.freepik.com/free-vector/flat-cms-concept-blue-shades_23-2148820933.jpg?w=740&t=st=1675153619~exp=1675154219~hmac=4bdac24a80dd49649d94b5a2abd365fc09e1c6ede29255a6025af37c242128d9)',
-            backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
+           
+          
+          
+         backgroundImage: 'url(https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1)',
+          //backgroundImage: 'url(https://github.com/iampooran/cms-frontend/blob/feature_pooran/src/assets/images/imagelogin.png)', 
+           //backgroundRepeat: 'no-repeat',
+           backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
         
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item  sm={6}  component={Paper} elevation={6} square> 
           <Box
             sx={{
               my: 8,
@@ -88,20 +122,46 @@ useEffect(()=>{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              //margin: 'Top',
+              //background: '#ddd',
+              //padding: '10px',
+              //borderRadius: '4px'
+              left: '0px',
+              top: '100px'
+
             }}
           >
-            <Box textAlign="center" sx={{ m: 1}}>
-            <img 
+            <Box textAlign="center" 
+            sx={{ 
+              m: 3,
+              left: '0px',
+              top: '94px',
+              padding: '5px',
+               //background: '#ddd',
+            }}>
+            <img  id='cloverBay-Logo'//Clover Logo
             src='https://g05991.p3cdn1.secureserver.net/wp-content/uploads/2021/10/CBT_Updated_Logo-168x55.png' alt="logo" />
           </Box>
           
-            <Typography component="h1" variant="h5">
+            <Typography component="h1" variant="h5" >
               Log in
             </Typography>
             {isLogin===1 || isLogin===null ? ""  : <Alert severity="error">Please enter valid credentials!</Alert>}
             
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-              <TextField
+            <Box component="form" noValidate onSubmit={handleSubmit} id="box1"
+            //Main Login BOX 
+            sx={{ mt: 1 ,
+            //position: 'absolute',
+            width: '400px',
+            height: '370px',
+            left: '0px',
+            top: '200px',
+            background: '#F2E6BF80', //Background color of Login Page
+            borderRadius: '10px',
+            padding: '45px'
+            
+            }}>
+              <CustomTextField className="textFiled"
                 margin="normal"
                 required
                 fullWidth
@@ -113,7 +173,7 @@ useEffect(()=>{
                 value={credentials.email}
                 onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
               />
-              <TextField
+              <CustomTextField className='textFiled2'
                 margin="normal"
                 required
                 fullWidth
@@ -125,15 +185,16 @@ useEffect(()=>{
                 value={credentials.password}
                 onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
               />
-              {/* <Button
+              <SignInButton
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, 
+                  mb: 2 }}
               >
                 Log In
-              </Button> */}
-              <PrimaryButton
+              </SignInButton>
+              {/* <PrimaryButton
               type="submit"
               fullWidth
               variant="contained"
@@ -141,10 +202,10 @@ useEffect(()=>{
               onClick = {handleSubmit}
               >
               log in 
-              </PrimaryButton>
+              </PrimaryButton> */}
               <Grid container>
                 <Grid item xs>
-                  <Typography  variant="body2">
+                  <Typography  variant="body2" >
                     <Link to="/forgot-password">
                       Forgot password?
                     </Link>
