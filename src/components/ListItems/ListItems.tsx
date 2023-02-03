@@ -9,6 +9,8 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import LayersIcon from '@mui/icons-material/Layers';
 import { Link } from 'react-router-dom';
 import "./ListItems.scss"
+import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 export const ListItems = (
   <React.Fragment>
@@ -20,29 +22,29 @@ export const ListItems = (
       <ListItemText primary="Dashboard" />
     </ListItemButton>
     </Link>
+    <Link className="sidebarLink" to="/adduser">
     <ListItemButton>
       <ListItemIcon>
-        <ShoppingCartIcon />
+        <PersonAddAltIcon/>
       </ListItemIcon>
-      <ListItemText primary="Orders" />
+      <ListItemText primary="Add User" />
     </ListItemButton>
+    </Link>
+    <Link className="sidebarLink" to="/userlist">
     <ListItemButton>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Customers" />
+      <ListItemText primary="User List" />
     </ListItemButton>
+    </Link>
+    <Link className="sidebarLink" to="/profile">
     <ListItemButton>
       <ListItemIcon>
-        <BarChartIcon />
+        <AccountBoxIcon  />
       </ListItemIcon>
-      <ListItemText primary="Reports" />
+      <ListItemText primary="Profile" />
     </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItemButton>
+    </Link>
   </React.Fragment>
 );
