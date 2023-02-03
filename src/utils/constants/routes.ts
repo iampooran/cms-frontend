@@ -3,7 +3,8 @@ export const routes: { [key: string]: string } = {
     login: "/login",
     forgotPassword: "/forgot-password",
     dashboard: "/dashboard",
-    
-    
+    profile: "/profile",
+    changepassword: "/changepassword",
+    userlist: "/userlist"
   };
   

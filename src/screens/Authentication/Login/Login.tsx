@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import {Link, useNavigate} from 'react-router-dom'
@@ -12,6 +11,8 @@ import { useState, useEffect } from 'react';
 import { Alert } from '@mui/material';
 import credentialsSuperAdmin from '../../../utils/validators/credentials.json'
 import PrimaryButton from '../../../components/Button/PrimaryButton';
+import { useDispatch } from 'react-redux';
+import { login } from '../../../utils/redux/reducer/authentication-slice';
 
 
 function Copyright(props: any) {
@@ -33,22 +34,32 @@ export default function Login() {
   const [credentials, setCredentials] = useState({email:"", password:""})
   const [isLogin, setIsLogin] = useState<number | null>(null)
   const navigate = useNavigate();
-  
+  const dispatch = useDispatch()
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     if(credentials.email===credentialsSuperAdmin.email && credentials.password===credentialsSuperAdmin.password){
-      setIsLogin(1) 
-    }
-    else{
+      setIsLogin(1)
+    }else{
       setIsLogin(0)
     }
+    
+    
+    // if(credentials.email===credentialsSuperAdmin.email && credentials.password===credentialsSuperAdmin.password){
+    //   setIsLogin(1)
+    // }
+    // else{
+    //   setIsLogin(0)
+    // }
   };
 
-  useEffect(()=>{
+useEffect(()=>{
     if(isLogin){
+      dispatch(login(isLogin))
       navigate("/")
     }
-  },[isLogin,navigate])
+  },[isLogin,navigate,dispatch])
 
   return (
     <ThemeProvider theme={theme}>
@@ -87,7 +98,7 @@ export default function Login() {
             <Typography component="h1" variant="h5">
               Log in
             </Typography>
-            {isLogin===null ? "" : <Alert severity="error">Please enter valid credentials!</Alert>}
+            {isLogin===1 || isLogin===null ? ""  : <Alert severity="error">Please enter valid credentials!</Alert>}
             
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
