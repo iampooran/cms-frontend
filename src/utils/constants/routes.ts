@@ -5,7 +5,6 @@ export const routes: { [key: string]: string } = {
     dashboard: "/dashboard",
     profile: "/profile",
     changepassword: "/changepassword",
-    adduser: "/adduser",
     userlist: "/userlist"
   };
   

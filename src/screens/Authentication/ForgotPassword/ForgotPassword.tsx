@@ -14,6 +14,9 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PrimaryButton from '../../../components/Button/PrimaryButton';
 
+import InputField from '../../../components/inputField';
+import { Validators } from '../../../utils/validators';
+
 
 const SignInButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: "white",
@@ -57,6 +60,11 @@ export default function SignInSide() {
     // const data = new FormData(event.currentTarget);
   };
 
+
+  const handleOnchange=(value:string)=>{
+    console.log(value)  // here you can access email input value
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
@@ -93,7 +101,7 @@ export default function SignInSide() {
               Forgot Password
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-              <CustomTextField
+              {/* <CustomTextField
                 margin="normal"
                 required
                 fullWidth
@@ -102,12 +110,36 @@ export default function SignInSide() {
                 name="email"
                 autoComplete="email"
                 autoFocus
-              />
-              <SignInButton
+              /> */}
+
+          <InputField 
+                // This are the props which your going to pass
+                variant='outlined' 
+                label = "Email"
+                sx = {{background: ''}}
+                fullWidth
+                autoFocus
+                style = {{width : '400px'}}
+                type = 'text'
+                
+
+                // by this function you can access the form value
+                onChangeData={handleOnchange} 
+
+                // here you can apply validators
+                validators={[{
+                    check: Validators.email,
+                    message: "Please Enter Valid Email" }]} 
+           ></InputField>
+
+
+
+              <SignInButton id='btn'
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+              
               >
                 Forgot Password
               </SignInButton>
