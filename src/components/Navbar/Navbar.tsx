@@ -62,12 +62,19 @@ const Navbar: FC<{ Component: FC }> = ({ Component }) => {
             >
               <MenuIcon sx={{color:"#BA9B37"}}/>
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#BA9B37", fontWeight:"bold"}}>
+            <Typography variant="h6" component="div" 
+            sx={{ 
+              flexGrow: 1, 
+              color: "#BA9B37", 
+              fontWeight:"bold", 
+              textAlign:"right",
+              marginRight: "5px"
+              }}>
             SuperAdmin Name
           </Typography>
-          <Typography variant="body1" component="div" sx={{ flexGrow: 3, color:"#BA9B37", fontWeight:"bold" }} >
+          {/* <Typography variant="body1" component="div" sx={{ flexGrow: 3, color:"#BA9B37", fontWeight:"bold", textAlign:"right" }} >
             Super Admin Information
-          </Typography>
+          </Typography> */}
           <div className="dropdown">
           <Avatar sx={{ mr: 2, bgcolor: '#BA9B37'}} className="profileIcon" >
             

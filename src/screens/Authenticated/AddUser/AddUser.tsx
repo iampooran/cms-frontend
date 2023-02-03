@@ -169,7 +169,7 @@ const AddUser = () => {
 
         <Grid container spacing={1} mt={1}>
           <Grid item xs={12} sm={4}>
-            <Typography sx={{ color: "#8D8D8E" }}>Address</Typography>
+            <Typography sx={{ color: "#8D8D8E" }}>Contact No.</Typography>
           </Grid>
           <Grid item xs={12} sm={8}>
             <Typography sx={{ color: "#8D8D8E" }}>
