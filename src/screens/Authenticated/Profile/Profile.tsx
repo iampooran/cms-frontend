@@ -3,6 +3,8 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';  
+import "./Profile.scss"
+import { width } from "@mui/system";
 const Profile = () => {
   return (
     <>
@@ -13,7 +15,8 @@ const Profile = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          textAlign:"center"
+          textAlign:"left",
+          
         }}
       >
         <Avatar sx={{ bgcolor: '#BA9B37'}} className="profileIcon" >
@@ -24,7 +27,7 @@ const Profile = () => {
         </Typography>
         
 
-        <Grid container spacing={1}>
+        <Grid container spacing={1} ml={38}>
           <Grid item xs={12} sm={6}>
             <Typography variant="h6" mt={3}>
               Email: useremail@gmail.com
@@ -38,7 +41,7 @@ const Profile = () => {
           </Grid>
         </Grid>
 
-        <Grid container spacing={1}>
+        <Grid container spacing={1} ml={38}>
           <Grid item xs={12} sm={6}>
             <Typography variant="h6" mt={3}>
               Date of Birth: 1-1-2000
@@ -47,12 +50,12 @@ const Profile = () => {
 
           <Grid item xs={12} sm={6}>
             <Typography variant="h6" mt={3}>
-              Role: Role Role
+              Role: Role
             </Typography>
           </Grid>
         </Grid>
 
-        <Grid container spacing={1}>
+        <Grid container spacing={1} ml={38}>
           <Grid item xs={12} sm={6}>
             <Typography variant="h6" mt={3}>
             Business Name
@@ -66,6 +69,25 @@ const Profile = () => {
           </Grid>
         </Grid>
         </Box>
+
+
+
+        <Box
+        sx={{
+          my: 8,
+          mx: 4,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          
+        }}
+      >
+
+
+
+      </Box>
+
+
     </>
   );
 };
