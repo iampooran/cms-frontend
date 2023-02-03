@@ -1,0 +1,76 @@
+.login-image{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: url(https://img.freepik.com/free-vector/flat-cms-concept-blue-shades_23-2148820933.jpg?w=740&t=st=1675153619~exp=1675154219~hmac=4bdac24a80dd49649d94b5a2abd365fc09e1c6ede29255a6025af37c242128d9);
+    filter: drop-shadow(7px 0px 24px rgba(0, 0, 0, 0.5));
+}
+
+.login-container{
+
+    box-sizing: border-box;
+    position: fixed;
+    /* width: 549px;
+    height: 669px;
+    left: 0px;
+    top: 94px; */
+    float: right;
+
+    background: rgba(186, 155, 55, 0.05);
+    border: 1px solid #BA9B37;
+    border-radius: 40px;
+
+}
+
+.login-title{
+
+position: absolute;
+left: 6.56%;
+right: 76.5%;
+top: 17.3%;
+bottom: 77.59%;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+color: #41434C;
+}
+
+.input-field-header {
+    position: absolute;
+    left: 8.56%;
+    right: 75.77%;
+    top: 32.63%;
+    bottom: 64.22%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #41434C;
+}
+
+.forgot-password{
+    position: absolute;
+    left: 9.47%;
+    right: 56.65%;
+    top: 91.87%;
+    bottom: 4.98%;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #BA9B37;
+}
