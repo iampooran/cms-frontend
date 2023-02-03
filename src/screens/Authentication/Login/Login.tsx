@@ -13,6 +13,32 @@ import credentialsSuperAdmin from '../../../utils/validators/credentials.json'
 import PrimaryButton from '../../../components/Button/PrimaryButton';
 import { useDispatch } from 'react-redux';
 import { login } from '../../../utils/redux/reducer/authentication-slice';
+import styledComponent from "styled-components";
+import { styled } from "@mui/material/styles";
+import Button from '@mui/material/Button';
+import { ButtonProps } from "@mui/material/Button";
+
+
+const SignInButton = styled(Button)<ButtonProps>(({ theme }) => ({
+  color: "white",
+  backgroundColor: "#BA9B37",
+  "&:hover": {
+    backgroundColor: "#EAE1C3",
+    color: "#BA9B37",
+  },
+}));
+
+
+const CustomTextField = styledComponent(TextField)`
+  & label.Mui-focused {
+    color: #BA9B37;
+  }
+  & .MuiOutlinedInput-root {
+    &.Mui-focused fieldset {
+      border-color: #BA9B37;
+    }
+  }
+`;
 
 
 function Copyright(props: any) {
@@ -71,7 +97,7 @@ useEffect(()=>{
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://img.freepik.com/free-vector/flat-cms-concept-blue-shades_23-2148820933.jpg?w=740&t=st=1675153619~exp=1675154219~hmac=4bdac24a80dd49649d94b5a2abd365fc09e1c6ede29255a6025af37c242128d9)',
+            backgroundImage: 'url(https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -101,7 +127,7 @@ useEffect(()=>{
             {isLogin===1 || isLogin===null ? ""  : <Alert severity="error">Please enter valid credentials!</Alert>}
             
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-              <TextField
+              <CustomTextField
                 margin="normal"
                 required
                 fullWidth
@@ -113,7 +139,7 @@ useEffect(()=>{
                 value={credentials.email}
                 onChange={(e) => setCredentials({ ...credentials, email: e.target.value })}
               />
-              <TextField
+              <CustomTextField
                 margin="normal"
                 required
                 fullWidth
@@ -125,15 +151,15 @@ useEffect(()=>{
                 value={credentials.password}
                 onChange={(e) => setCredentials({ ...credentials, password: e.target.value })}
               />
-              {/* <Button
+              <SignInButton
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
                 Log In
-              </Button> */}
-              <PrimaryButton
+              </SignInButton>
+              {/* <PrimaryButton
               type="submit"
               fullWidth
               variant="contained"
@@ -141,7 +167,7 @@ useEffect(()=>{
               onClick = {handleSubmit}
               >
               log in 
-              </PrimaryButton>
+              </PrimaryButton> */}
               <Grid container>
                 <Grid item xs>
                   <Typography  variant="body2">
