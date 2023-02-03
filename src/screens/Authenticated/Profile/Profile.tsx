@@ -86,7 +86,7 @@ const AddUser = () => {
               fullWidth
               id="firstName"
               label="Please Enter First Name"
-              autoFocus
+              // autoFocus
             />
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -141,7 +141,7 @@ const AddUser = () => {
               fullWidth
               id="address"
               label="Please Enter User Address"
-              autoFocus
+              // autoFocus
             />
           </Grid>
           <Grid item xs={12} sm={4}>
@@ -162,7 +162,7 @@ const AddUser = () => {
               fullWidth
               id="email"
               label="Please Enter Email"
-              autoFocus
+              // autoFocus
             />
           </Grid>
         </Grid>
@@ -185,7 +185,7 @@ const AddUser = () => {
               fullWidth
               id="phoneNumber"
               label="Please Enter Phone Number"
-              autoFocus
+              // autoFocus
             />
           </Grid>
           <Grid item xs={12} sm={8}>

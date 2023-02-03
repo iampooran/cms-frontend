@@ -11,6 +11,7 @@ import HomeScreen from "../screens/Authenticated/Home/HomeScreen";
 //import AddUser from "../screens/Authenticated/AddUser/AddUser";
 import UserList from "../screens/Authenticated/UserList/UserList";
 import Demo from "../screens/Authenticated/Demo/Demo";
+import AddUser from "../screens/Authenticated/AddUser/AddUser";
 
 const Routes: FC = () => {
 
@@ -25,9 +26,10 @@ const Routes: FC = () => {
         <Route path={routes.profile} element={<HomeScreen Component={Profile}/>} />
      
         <Route path={routes.userlist} element={<HomeScreen Component={UserList}/>} />
+        <Route path={routes.adduser} element = {<HomeScreen Component={AddUser}/>}/>
   
-        {/* Dummy page just for experiments */}
-        <Route path={'/Demo'} element={<HomeScreen Component={Demo}/>} />
+        {/* Dummy page just for experiments
+        <Route path={'/Demo'} element={<HomeScreen Component={Demo}/>} /> */}
   </Switch>
     </>
   );

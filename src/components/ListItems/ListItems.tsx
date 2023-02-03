@@ -27,7 +27,7 @@ export const ListItems = (
       <ListItemIcon>
         <PersonAddAltIcon/>
       </ListItemIcon>
-      <ListItemText primary="Add User" />
+      <ListItemText primary="Add Admin" />
     </ListItemButton>
     </Link>
     <Link className="sidebarLink" to="/userlist">
@@ -35,7 +35,7 @@ export const ListItems = (
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="User List" />
+      <ListItemText primary="Admin List" />
     </ListItemButton>
     </Link>
     <Link className="sidebarLink" to="/profile">
