@@ -114,6 +114,7 @@ export default function SignInSide() {
 
           <InputField 
                 // This are the props which your going to pass
+                id='email'
                 variant='outlined' 
                 label = "Email"
                 sx = {{background: ''}}
@@ -141,7 +142,7 @@ export default function SignInSide() {
                 sx={{ mt: 3, mb: 2 }}
               
               >
-                Forgot Password
+                Send OTP
               </SignInButton>
               {/* <PrimaryButton
                 type="submit"

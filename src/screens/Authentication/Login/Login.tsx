@@ -195,6 +195,7 @@ export default function Login() {
 
               <InputField
                 // This are the props which your going to pass
+                id='email'
                 variant='outlined'
                 label="Email"
                 sx={{ background: '' }}
@@ -211,6 +212,7 @@ export default function Login() {
 
               <InputField
                 // This are the props which your going to pass
+                id="password"
                 variant='outlined'
                 label="Password"
                 sx={{ background: '' }}
