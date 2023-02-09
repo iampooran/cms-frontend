@@ -14,7 +14,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import PrimaryButton from '../../../components/Button/PrimaryButton';
 
-import InputField from '../../../components/inputField';
+import InputField from '../../../components/MyinputField';
 import { Validators } from '../../../utils/validators';
 
 

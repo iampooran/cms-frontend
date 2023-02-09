@@ -1,4 +1,4 @@
-import { FormValidators } from "../../components/Form";
+import { FormValidators } from "../../components/myForm";
 
 const regex = {
     email: new RegExp(

@@ -1,0 +1,92 @@
+
+@import '../../../assets/scss/variables.scss';
+
+.login {
+
+  //background-color: #f5f7fb;
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
+
+  .login-form {
+    height: 100vh;
+    align-items: center;
+    padding: 0 20px;
+
+    @media (min-width: 768px) {
+      padding: 0 80px;
+    }
+
+    input {
+      height: 45px;
+      border-radius: 4px !important;
+    }
+
+    .card {
+      .btn {
+        height: 45px;
+        border-radius: 4px !important;
+        background-color: $primary;
+        border-color: $primary;
+
+        &:active,
+        :focus {
+          height: 45px;
+          border-radius: 4px !important;
+          background-color: $primary;
+          border-color: $primary;
+        }
+
+        &:hover {
+          opacity: .9;
+        }
+      }
+    }
+
+    .captcha {
+      margin: 10px 0;
+    }
+
+    #change-password {
+      .btn {
+        height: 45px;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &.vh-100 {
+      height: auto !important;
+    }
+
+    .vh-100 {
+      height: auto !important;
+    }
+
+    padding-bottom: 30px;
+  }
+}
+
+.resendCode {
+  &:hover {
+    color: $primary;
+  }
+}
+
+.login-container {
+  background: url('../../../assets/images/authBg.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.other-links{
+  margin: 16px 0px 8px;
+  font-family: Sen;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #4ea1a8;
+  text-decoration-line: underline;
+}

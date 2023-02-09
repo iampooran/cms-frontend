@@ -10,7 +10,7 @@ import ChangePassword from "../screens/Authenticated/ChangePassword/ChangePasswo
 import HomeScreen from "../screens/Authenticated/Home/HomeScreen";
 //import AddUser from "../screens/Authenticated/AddUser/AddUser";
 import UserList from "../screens/Authenticated/UserList/UserList";
-import Demo from "../screens/Authenticated/Demo/Demo";
+import Demo from "../screens/Authentication/TickitLogin/Login";
 import AddUser from "../screens/Authenticated/AddUser/AddUser";
 
 const Routes: FC = () => {

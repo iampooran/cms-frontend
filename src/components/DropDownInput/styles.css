@@ -1,0 +1,10 @@
+.input-field{
+    margin-bottom: 10px;
+    width: 100%;
+}
+    @media (max-width: 600px) {
+        .dropdown .MuiSelect-select{
+            width: calc(100vw - 80px);    
+    }
+    
+}

@@ -21,7 +21,7 @@ import '../Login/login.css'
 import { blue } from '@mui/material/colors';
 //import imagelogin from '../../../assets/images/imagelogin.png'
 
-import InputField from '../../../components/inputField';
+import InputField from '../../../components/MyinputField';
 import { Validators } from '../../../utils/validators';
 
 
