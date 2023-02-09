@@ -98,7 +98,6 @@ export default function Login() {
   const handleOnchangeEmail = (value: string) => {
     // console.log(value)  // here you can access that value
     setCredentials({ ...credentials, email: value })
-
   }
 
   const handleOnchangePass = (value: string) => {
