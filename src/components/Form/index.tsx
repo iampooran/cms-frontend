@@ -1,5 +1,5 @@
 import React, { Component, ReactElement } from "react";
-import InputField from "../InputField";
+import InputField from "../inputField";
 import { Grid, TextFieldProps } from "@mui/material";
 import "./form.scss";
 import DropDownInput from "../DropDownInput";
